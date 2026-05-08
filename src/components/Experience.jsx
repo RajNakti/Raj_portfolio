@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiCalendar, FiTrendingUp } from 'react-icons/fi';
+import { FiBriefcase, FiCalendar } from 'react-icons/fi';
 
 const experiences = [
   {

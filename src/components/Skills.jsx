@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import {
-  FaReact, FaNodeJs, FaPython, FaJsSquare, FaHtml5,
+  FaReact, FaNodeJs, FaPython, FaJsSquare,
   FaGitAlt, FaDocker, FaAws, FaDatabase, FaJava, FaCloud, FaBootstrap,
 } from 'react-icons/fa';
 import {
@@ -188,7 +188,7 @@ const Skills = () => {
             
             <div className="space-y-4">
               {[0, 1].map((row) => (
-                <div key={row} >
+                <div key={row} className="marquee-shell">
                   <div className={`marquee-track ${row === 1 ? 'marquee-track-slower' : ''}`}>
                     {[...marqueeSkills, ...marqueeSkills].map((tech, index) => (
                       <span
