@@ -5,39 +5,51 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Olfactory Classification of Fruits using IoT',
-      description: 'An innovative IoT-based system for fruit classification using olfactory sensors. Implemented machine learning algorithms to analyze scent patterns and classify different types of fruits with high accuracy.',
+      title: 'Venue OCR Service',
+      description: 'Built a scalable OCR workflow for handwritten text extraction using AI models, async workers, serverless inference, and cloud deployment for high-accuracy document processing.',
       image: '/api/placeholder/400/250',
-      technologies: ['IoT', 'Machine Learning', 'Python', 'Data Analysis'],
+      technologies: ['Python', 'Celery', 'Redis', 'PostgreSQL', 'Runpod', 'vLLM', 'Docker', 'OCR'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/rajnakti/olfactory-fruit-classification',
+      githubUrl: 'https://github.com/RajNakti',
       featured: true,
       gradient: 'from-blue-500 to-purple-600',
       iconColor: 'text-blue-600'
     },
     {
       id: 2,
-      title: 'Anti Sleep Driver Glasses',
-      description: 'A safety-focused project developing smart glasses that detect driver drowsiness using computer vision and alert systems. Helps prevent accidents caused by driver fatigue.',
+      title: 'MCP Master',
+      description: 'Created a ChatGPT-style platform connected to multiple MCP tools like Gmail, Calendar, and to-do systems, with OAuth flows, LLM-triggered actions, and a dynamic admin permissions panel.',
       image: '/api/placeholder/400/250',
-      technologies: ['Computer Vision', 'OpenCV', 'Python', 'Hardware Integration'],
+      technologies: ['Python', 'FastAPI', 'React', 'SQLite', 'OAuth', 'Composio', 'JWT', 'MCP'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/rajnakti/anti-sleep-driver-glasses',
+      githubUrl: 'https://github.com/RajNakti',
       featured: true,
       gradient: 'from-green-500 to-teal-600',
       iconColor: 'text-green-600'
     },
     {
       id: 3,
-      title: 'Machine Learning Data Analysis',
-      description: 'Comprehensive data analysis project using various ML algorithms and methodologies. Implemented during internship at RAIT, focusing on practical applications of data science.',
+      title: 'Email Agent',
+      description: 'Built an automated complaint-handling system that classifies emails, raises tickets, processes attachments, and supports multiple model backends including AWS Bedrock.',
       image: '/api/placeholder/400/250',
-      technologies: ['Python', 'Scikit-learn', 'Data Analysis', 'Neural Networks'],
+      technologies: ['Python', 'FastAPI', 'RAG', 'AWS Bedrock', 'SQLite', 'OpenAI', 'Automation'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/rajnakti/ml-data-analysis',
+      githubUrl: 'https://github.com/RajNakti',
       featured: true,
       gradient: 'from-pink-500 to-rose-600',
       iconColor: 'text-pink-600'
+    },
+    {
+      id: 4,
+      title: 'Health Agent',
+      description: 'Developed an AI health assistant that analyzes uploaded reports and medicine-related documents to provide personalized guidance, likely outcomes, and structured recommendations.',
+      image: '/api/placeholder/400/250',
+      technologies: ['Python', 'FastAPI', 'RAG', 'Agno', 'Streamlit', 'OpenAI', 'Healthcare AI'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/RajNakti',
+      featured: false,
+      gradient: 'from-amber-500 to-orange-600',
+      iconColor: 'text-amber-600'
     }
   ];
 
@@ -166,7 +178,7 @@ const Projects = () => {
           </div>
 
           {/* Projects Grid - 3 Cards in Single Row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
             {projects && projects.length > 0 ? (
               projects.map((project) => (
                 <ProjectCard key={project.id} project={project} />

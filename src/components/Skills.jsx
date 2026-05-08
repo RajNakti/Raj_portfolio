@@ -1,45 +1,72 @@
 import { motion } from 'framer-motion';
 import {
-  FaReact, FaNodeJs, FaPython, FaJsSquare, FaHtml5, FaCss3Alt,
-  FaGitAlt, FaDocker, FaAws, FaDatabase, FaJava
+  FaReact, FaNodeJs, FaPython, FaJsSquare, FaHtml5,
+  FaGitAlt, FaDocker, FaAws, FaDatabase, FaJava, FaCloud, FaBootstrap,
 } from 'react-icons/fa';
 import {
-  SiTypescript, SiMongodb, SiPostgresql, SiExpress, SiTailwindcss,
-  SiNextdotjs, SiRedis, SiGraphql, SiFirebase, SiVercel, SiOpencv,
-  SiTensorflow, SiScikitlearn, SiPostman, SiGithub
+  SiMongodb, SiPostgresql, SiExpress, SiTailwindcss,
+  SiNextdotjs, SiRedis, SiOpenai, SiPostman, SiGithub,
+  SiLangchain, SiOllama, SiFastapi, SiHuggingface, SiCelery, SiAnthropic, SiStreamlit, SiGooglegemini, SiPydantic, 
 } from 'react-icons/si';
 
 const Skills = () => {
+  const marqueeSkills = [
+    'Open-Source Models', 'LLM', 'Prompt Engineering', 'RAG', 'AI Agents', 'Fine-Tuning',
+    'Transformers', 'Voice Agents', 'OCR', 'vLLM', 'Context Optimization',
+    'Agentic AI', 'MCP Tools', 'Docker Deployment', 'Tool Calling',
+    'Unsloth', 'NLP', 'Collab', 'IoT', 'Orchestration', 'Runpod', 'AWS Bedrock'
+  ];
+
   const skillCategories = [
     {
-      title: 'Programming Languages',
+      title: 'AI & GenAI',
       skills: [
-        { name: 'Python', icon: FaPython, level: 90, color: 'text-blue-500' },
-        { name: 'Java', icon: FaJava, level: 85, color: 'text-red-500' },
-        { name: 'JavaScript', icon: FaJsSquare, level: 80, color: 'text-yellow-500' },
-        { name: 'SQL', icon: FaDatabase, level: 85, color: 'text-blue-600' },
-        { name: 'HTML/CSS', icon: FaHtml5, level: 90, color: 'text-orange-500' }
+        { name: 'Python', icon: FaPython, level: 95, color: 'text-blue-500' },
+        { name: 'LangChain', icon: SiLangchain, level: 85, color: 'text-emerald-500' },
+        { name: 'Hugging Face', icon: SiHuggingface, level: 95, color: 'text-yellow-500' },
+        { name: 'Ollama', icon: SiOllama, level: 100, color: 'text-gray-700 dark:text-gray-200' },
+        { name: 'OpenAI APIs', icon: SiOpenai, level: 100, color: 'text-green-500' },
+        { name: 'Anthropic APIs', icon: SiAnthropic, level: 100, color: 'text-purple-500' },
+        { name: 'Google Gemini', icon: SiGooglegemini, level: 100, color: 'text-blue-500' },
+        { name: 'AWS Bedrock', icon: FaAws, level: 90, color: 'text-cyan-500' },
       ]
     },
     {
-      title: 'Frameworks & Libraries',
+      title: 'Backend & Full Stack',
       skills: [
-        { name: 'React', icon: FaReact, level: 85, color: 'text-blue-500' },
+        { name: 'Pydantic', icon: SiPydantic, level: 85, color: 'text-blue-500' },
+        { name: 'Celery', icon: SiCelery, level: 85, color: 'text-blue-500' },
+        { name: 'FastAPI', icon: SiFastapi, level: 90, color: 'text-teal-500' },
+        { name: 'Next.js', icon: SiNextdotjs, level: 80, color: 'text-gray-900 dark:text-white' },
         { name: 'Express.js', icon: SiExpress, level: 80, color: 'text-gray-700 dark:text-gray-300' },
         { name: 'Node.js', icon: FaNodeJs, level: 80, color: 'text-green-500' },
-        { name: 'OpenCV', icon: SiOpencv, level: 75, color: 'text-green-600' },
-        { name: 'Scikit-learn', icon: SiScikitlearn, level: 80, color: 'text-orange-500' }
+        { name: 'JavaScript', icon: FaJsSquare, level: 80, color: 'text-yellow-500' },
+        { name: 'Java', icon: FaJava, level: 75, color: 'text-red-500' }
       ]
     },
     {
-      title: 'Technologies & Tools',
+      title: 'Cloud, Data & Tooling',
       skills: [
         { name: 'MongoDB', icon: SiMongodb, level: 85, color: 'text-green-500' },
+        { name: 'PostgreSQL', icon: SiPostgresql, level: 85, color: 'text-sky-600' },
+        { name: 'Redis', icon: SiRedis, level: 75, color: 'text-rose-500' },
+        { name: 'AWS', icon: FaAws, level: 75, color: 'text-orange-400' },
+        { name: 'Runpod', icon: FaCloud, level: 75, color: 'text-blue-400' },
+        { name: 'Docker', icon: FaDocker, level: 85, color: 'text-cyan-500' },
         { name: 'Git', icon: FaGitAlt, level: 90, color: 'text-orange-500' },
         { name: 'GitHub', icon: SiGithub, level: 90, color: 'text-gray-900 dark:text-white' },
         { name: 'Postman', icon: SiPostman, level: 85, color: 'text-orange-400' },
-        { name: 'AWS', icon: FaAws, level: 70, color: 'text-orange-400' },
-        { name: 'VS Code', icon: FaDatabase, level: 95, color: 'text-blue-500' }
+        { name: 'SQL', icon: FaDatabase, level: 85, color: 'text-blue-600' }
+      ]
+    },
+    {
+      title: 'Frontend & Delivery',
+      skills: [
+        { name: 'Tailwind CSS', icon: SiTailwindcss, level: 85, color: 'text-cyan-400' },
+        { name: 'Bootstrap', icon: FaBootstrap, level: 80, color: 'text-purple-500' },
+        { name: 'React', icon: FaReact, level: 85, color: 'text-blue-500' },
+        { name: 'Next.js', icon: SiNextdotjs, level: 80, color: 'text-green-500' },
+        { name: 'Streamlit', icon: SiStreamlit, level: 75, color: 'text-orange-500' }
       ]
     }
   ];
@@ -159,22 +186,20 @@ const Skills = () => {
               Other Technologies
             </h3>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                'Machine Learning', 'Data Science', 'Neural Networks', 'SDLC', 'Agile',
-                'IoT Development', 'Computer Vision', 'Tesseract OCR',
-                'Data Analysis', 'Algorithm Design'
-              ].map((tech, index) => (
-                <motion.span
-                  key={tech}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ scale: 1.1 }}
-                  className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium cursor-default"
-                >
-                  {tech}
-                </motion.span>
+            <div className="space-y-4">
+              {[0, 1].map((row) => (
+                <div key={row} >
+                  <div className={`marquee-track ${row === 1 ? 'marquee-track-slower' : ''}`}>
+                    {[...marqueeSkills, ...marqueeSkills].map((tech, index) => (
+                      <span
+                        key={`${row}-${tech}-${index}`}
+                        className="marquee-pill"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </motion.div>

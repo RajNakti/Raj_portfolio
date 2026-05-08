@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiChevronDown, FiDownload } from 'react-icons/fi';
-import { FaGithub, FaLinkedin, FaMailBulk, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState(0);
   const texts = [
-    'Full Stack Developer',
-    'Java | AI & ML',
-    'Data Science Enthusiast',
-    'Software Engineer'
+    'AI Developer',
+    'Gen AI Software Engineer',
+    'LLM & Agent Builder',
+    'Full-Stack AI Engineer'
   ];
 
   useEffect(() => {
@@ -153,8 +153,8 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Passionate about creating innovative solutions in AI, ML, and Data Science.
-            Experienced in developing machine learning projects and building scalable applications.
+            I build AI products with LLMs, RAG, voice and workflow agents, and full-stack systems.
+            Currently working as a Gen AI Software Engineer, focused on production-ready automation and intelligent user experiences.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -186,7 +186,7 @@ const Hero = () => {
                 boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
               }}
               whileTap={{ scale: 0.95 }}
-              href="/Raj-Nakti-Resume.pdf"
+              href="/Raj-Nakti-Resume2.pdf"
               download
               className="px-8 py-4 bg-white dark:bg-gray-800 text-gray-800 dark:text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 flex items-center gap-2"
             >
@@ -202,7 +202,7 @@ const Hero = () => {
           >
             {[
               { icon: FaGithub, href: 'https://github.com/RajNakti', label: 'GitHub', color: 'hover:text-gray-900 dark:hover:text-white' },
-              { icon: FaMailBulk, href: 'mailto:naktiraj77@gmail.com', label: 'LinkedIn', color: 'hover:text-blue-600 dark:hover:text-blue-400' },
+              { icon: FaEnvelope, href: 'mailto:naktiraj77@gmail.com', label: 'Email', color: 'hover:text-blue-600 dark:hover:text-blue-400' },
               { icon: FaLinkedin, href: 'https://www.linkedin.com/in/raj-nakti-154b94245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ', label: 'LinkedIn', color: 'hover:text-blue-500 dark:hover:text-blue-300' }
             ].map(({ icon: Icon, href, label, color }) => (
               <motion.a

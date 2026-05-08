@@ -14,6 +14,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
     { name: 'Home', href: '#home', type: 'scroll' },
     { name: 'About', href: '#about', type: 'scroll' },
     { name: 'Education', href: '#education', type: 'scroll' },
+    { name: 'Experience', href: '#experience', type: 'scroll' },
     { name: 'Skills', href: '#skills', type: 'scroll' },
     { name: 'Projects', href: '#projects', type: 'scroll' },
     { name: 'Freelancing', href: '/freelancing', type: 'route' },
@@ -25,7 +26,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
       setScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'education', 'skills', 'projects', 'contact'];
+      const sections = ['home', 'about', 'education', 'experience', 'skills', 'projects', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {

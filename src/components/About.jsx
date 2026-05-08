@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { FiDownload, FiUser, FiCode, FiHeart } from 'react-icons/fi';
+import { FiDownload, FiCode, FiHeart } from 'react-icons/fi';
 
 const About = () => {
   const stats = [
-    { number: '10+', label: 'Certifications' },
+    { number: '3+', label: 'Years Building' },
     { number: '7+', label: 'Projects Completed' },
-    { number: '15+', label: 'Technologies' },
+    { number: '25+', label: 'AI & Dev Tools' },
     { number: '8.71', label: 'CGPA' }
   ];
 
@@ -102,38 +102,31 @@ const About = () => {
             {/* About Content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-                I'm Raj Nakti, a passionate Full Stack Developer
+                I'm Raj Nakti, an AI Developer building practical products
               </h3>
 
               <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <p>
-                  I'm a Full Stack Developer specializing in Java, AI & ML, currently completed
-                  my Bachelor of Engineering (IT) at AC Patil College of Engineering, Kharghar
-                  with a CGPA of 8.71. My journey in tech has been enriched by hands-on experience
-                  in Data Science and Machine Learning.
+                  I'm currently working as a Gen AI Software Engineer at Logicloop, where I build AI agents,
+                  automation workflows, RAG systems, and scalable backend services around open-source models.
+                  My background combines AI engineering with full-stack product development, so I enjoy taking
+                  ideas from prototype to production.
                 </p>
 
                 <p>
-                  During my internship at RAIT, Navi Mumbai (Dec 2022 - Jan 2023), I developed
-                  machine learning projects from scratch, worked with various methodologies like
-                  SDLC, Agile, Neural Networks, and gained experience with technologies like
-                  Tesseract, scikit-learn, and OpenCV.
-                </p>
-
-                <p>
-                  I'm passionate about creating innovative solutions that bridge technology and
-                  real-world applications, from IoT-based fruit classification systems to
-                  anti-sleep driver safety solutions.
+                  My recent work spans model fine-tuning with LoRA and Unsloth, OCR services, MCP-based tools,
+                  email automation, and AI copilots for health and operations use cases. I care most about
+                  building useful systems that solve real business problems with clean engineering.
                 </p>
               </div>
 
               {/* Skills Highlights */}
               <div className="grid grid-cols-2 gap-4 py-6">
                 {[
-                  'Machine Learning',
-                  'Data Science',
-                  'Java Development',
-                  'IoT Applications'
+                  'AI Agents & RAG',
+                  'LLM Fine-Tuning',
+                  'Python & FastAPI',
+                  'React & Node.js'
                 ].map((skill, index) => (
                   <motion.div
                     key={skill}
@@ -152,7 +145,7 @@ const About = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/Raj-Nakti-Resume.pdf"
+                href="/Raj-Nakti-Resume2.pdf"
                 download
                 className="inline-flex items-center gap-2 btn-primary"
               >

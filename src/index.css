@@ -238,3 +238,41 @@ img[data-loaded="true"] {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
+
+.marquee-shell {
+  @apply relative overflow-hidden rounded-full border border-gray-200 bg-gray-50/80 px-3 py-3 dark:border-gray-700 dark:bg-gray-900/70;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: marquee-left 26s linear infinite;
+}
+
+.marquee-track-slower {
+  animation-duration: 34s;
+}
+
+.marquee-pill {
+  @apply inline-flex shrink-0 items-center rounded-full border border-blue-200/60 bg-gradient-to-r from-blue-100 to-fuchsia-100 px-4 py-2 text-sm font-medium text-gray-700 dark:border-blue-500/20 dark:from-blue-900/70 dark:to-fuchsia-900/70 dark:text-gray-200;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .marquee-track-slower {
+    animation: none !important;
+  }
+}

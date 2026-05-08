@@ -6,90 +6,48 @@ const Education = () => {
     {
       id: 1,
       degree: 'Bachelor of Engineering (Information Technology)',
-      institution: 'AC Patil College of Engineering, Kharghar',
-      location: 'Navi Mumbai, Maharashtra',
+      institution: 'Annasaheb Chudaman Patil College of Engineering',
+      location: 'Kharghar, India',
       duration: '2020 - 2024',
       cgpa: '8.71 CGPA',
-      description: 'Pursuing B.E. in Information Technology with focus on software development, data structures, algorithms, and emerging technologies.',
+      description: 'Completed B.E. in Information Technology with a strong foundation in software engineering, problem solving, and emerging AI technologies.',
       highlights: [
         'Strong academic performance with 8.71 CGPA',
-        'Active participation in technical projects',
-        'Focus on AI, ML, and Data Science',
-        'Hands-on experience with modern technologies'
-      ]
-    },
-    {
-      id: 2,
-      degree: 'Higher Secondary Certificate (HSC)',
-      institution: 'Previous Institution',
-      location: 'Maharashtra',
-      duration: '2018 - 2020',
-      cgpa: 'Completed',
-      description: 'Completed higher secondary education with focus on Science stream, building foundation for engineering studies.',
-      highlights: [
-        'Science stream with Mathematics',
-        'Strong foundation in Physics and Mathematics',
-        'Prepared for engineering entrance exams',
-        'Developed analytical thinking skills'
+        'Focused on AI, software engineering, and product development',
+        'Built applied projects across ML, OCR, automation, and full-stack systems',
+        'Developed hands-on skills through internships and freelance client work'
       ]
     }
   ];
 
   const certifications = [
     {
-      title: 'Data Science & Machine Learning Internship',
-      issuer: 'RAIT, Navi Mumbai',
-      date: 'Dec 2022 - Jan 2023',
-      description: 'Hands-on experience with ML algorithms, neural networks, and data analysis tools',
+      title: 'JAVA-DSA-OOP',
+      issuer: 'UPGARD',
+      date: '2023',
+      description: 'Covered Java programming, data structures, algorithms, and core object-oriented design concepts.',
       gradient: 'from-blue-500 to-purple-600',
       bgColor: 'bg-blue-50 dark:bg-blue-900/20',
       iconColor: 'text-blue-600 dark:text-blue-400'
     },
     {
-      title: 'Full Stack Development',
-      issuer: 'Self-Learning',
-      date: '2022 - Present',
-      description: 'Comprehensive understanding of modern web development technologies',
+      title: 'AWS Builder Series',
+      issuer: 'Amazon Web Services',
+      date: '2022',
+      description: 'Strengthened cloud computing fundamentals and understanding of AWS services used in scalable systems.',
       gradient: 'from-green-500 to-teal-600',
       bgColor: 'bg-green-50 dark:bg-green-900/20',
       iconColor: 'text-green-600 dark:text-green-400'
     },
     {
-      title: 'JAVA-DSA-OOP',
-      issuer: 'UPGARD',
+      title: 'JavaScript and Bootstrap',
+      issuer: 'Udemy',
       date: '2023',
-      description: 'Comprehensive course covering Java programming, Data Structures, Algorithms, and Object-Oriented Programming concepts',
+      description: 'Focused on modern JavaScript concepts, asynchronous flows, and building interactive frontend experiences.',
       gradient: 'from-orange-500 to-red-600',
       bgColor: 'bg-orange-50 dark:bg-orange-900/20',
       iconColor: 'text-orange-600 dark:text-orange-400'
     },
-    {
-      title: 'AWS Builder Series',
-      issuer: 'Amazon Web Services',
-      date: '2022',
-      description: 'Cloud computing fundamentals and AWS services for building scalable applications',
-      gradient: 'from-yellow-500 to-orange-600',
-      bgColor: 'bg-yellow-50 dark:bg-yellow-900/20',
-      iconColor: 'text-yellow-600 dark:text-yellow-400'
-    },
-    {
-      title: 'JavaScript',
-      issuer: 'UDEMY',
-      date: '2023',
-      description: 'Modern JavaScript programming including ES6+, DOM manipulation, and asynchronous programming',
-      gradient: 'from-purple-500 to-pink-600',
-      bgColor: 'bg-purple-50 dark:bg-purple-900/20',
-      iconColor: 'text-purple-600 dark:text-purple-400'
-    },
-    {
-      title: 'Bootstrap',
-      issuer: 'UDEMY',
-      date: '2023',
-      description: 'Responsive web design using Bootstrap framework for creating mobile-first websites',
-      gradient: 'from-indigo-500 to-blue-600',
-      bgColor: 'bg-indigo-50 dark:bg-indigo-900/20',
-      iconColor: 'text-indigo-600 dark:text-indigo-400'
-    }
   ];
 
   const containerVariants = {
