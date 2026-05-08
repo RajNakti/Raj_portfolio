@@ -54,7 +54,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-8xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const Experience = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-300">
               Work <span className="gradient-text">Experience</span>
             </h2>
             <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">

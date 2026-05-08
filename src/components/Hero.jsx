@@ -226,7 +226,7 @@ const Hero = () => {
         </motion.div>
 
         {/* Scroll Down Indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
@@ -253,7 +253,7 @@ const Hero = () => {
           >
             Scroll to explore
           </motion.p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

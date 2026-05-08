@@ -104,7 +104,7 @@ function App() {
             </motion.div>
           )}
         </AnimatePresence>
-        {!isLoading ? <PortfolioAgent /> : null}
+        {/* {!isLoading ? <PortfolioAgent /> : null} */}
       </div>
     </Router>
   );

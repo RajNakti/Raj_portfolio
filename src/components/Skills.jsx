@@ -97,7 +97,7 @@ const Skills = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
+      transition={{ delay: index * 0.02 }}
       whileHover={{
         scale: 1.05,
         boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
@@ -144,7 +144,7 @@ const Skills = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-300">
               My <span className="gradient-text">Skills</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -189,7 +189,7 @@ const Skills = () => {
             <div className="space-y-4">
               {[0, 1].map((row) => (
                 <div key={row} className="marquee-shell">
-                  <div className={`marquee-track ${row === 1 ? 'marquee-track-slower' : ''}`}>
+                  <div className={`marquee-track ${row === 1 ? 'marquee-track-right' : ''}`}>
                     {[...marqueeSkills, ...marqueeSkills].map((tech, index) => (
                       <span
                         key={`${row}-${tech}-${index}`}
