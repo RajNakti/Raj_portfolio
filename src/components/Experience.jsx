@@ -155,7 +155,7 @@ const Experience = () => {
                       {/* Type + Active badges */}
                       <div className="flex flex-wrap items-center gap-2">
                         {/* <span className="inline-flex items-center gap-1.5 rounded-full border border-gray-600 bg-gray-900/50 px-3 py-0.5 text-xs text-gray-400"> */}
-                        <span className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-900/50 px-3 py-0.5 text-xs text-gray-700 dark:text-gray-400">
+                        <span className="hidden md:inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-900/50 px-3 py-0.5 text-xs text-gray-700 dark:text-gray-400">
                           <FiCalendar size={10} />
                           {experience.duration}
                         </span>

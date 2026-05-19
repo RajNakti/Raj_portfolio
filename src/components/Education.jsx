@@ -146,8 +146,8 @@ const Education = () => {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       {edu.highlights.map((highlight, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div key={idx} className="flex items-start space-x-2">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-1.5 shrink-0"></div>
                           <span className="text-gray-700 dark:text-gray-300 text-sm">
                             {highlight}
                           </span>

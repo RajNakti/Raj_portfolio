@@ -131,8 +131,7 @@ const Projects = () => {
     whileHover={{ y: -10 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     // className="bg-white dark:bg-gray-800/50 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-gray-600 relative flex-shrink-0 group backdrop-blur-sm"
-    className="bg-white dark:bg-gray-800/50 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-gray-600 relative flex flex-col flex-shrink-0 group backdrop-blur-sm"
-    style={{ width: '275px', minHeight: '450px' }}
+    className="bg-white dark:bg-gray-800/50 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-gray-600 relative flex flex-col flex-shrink-0 group backdrop-blur-sm w-[275px] min-h-[450px]"
   >
     {/* Project Image */}
     <div className="relative overflow-hidden">
