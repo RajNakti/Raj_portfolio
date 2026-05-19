@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
 import Freelancing from './components/Freelancing';
+import PortfolioAgent from './components/PortfolioAgent';
 
 // Home Page Component
 const HomePage = ({ darkMode, toggleDarkMode }) => (
@@ -103,6 +104,7 @@ function App() {
             </motion.div>
           )}
         </AnimatePresence>
+        {/* {!isLoading ? <PortfolioAgent /> : null} */}
       </div>
     </Router>
   );

@@ -25,6 +25,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body, #root {
+  overflow-x: hidden;
+}
+
 /* Custom animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
@@ -44,13 +48,13 @@ html {
   animation: glow 2s ease-in-out infinite alternate;
 }
 
-/* Gradient text */
+/* Gradient text
 .gradient-text {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+} */
 
 /* Custom button styles */
 .btn-primary {
@@ -149,6 +153,15 @@ button:focus, a:focus {
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
 }
+
+/* .gradient-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+} */
 
 @keyframes gradient-shift {
   0%, 100% { background-position: 0% 50%; }
@@ -250,7 +263,15 @@ img[data-loaded="true"] {
   display: flex;
   align-items: center;
   gap: 1rem;
-  animation: marquee-left 26s linear infinite;
+  animation: marquee-left 20s linear infinite;
+}
+
+.marquee-track-right {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: marquee-right 20s linear infinite;
 }
 
 .marquee-track-slower {
@@ -258,7 +279,7 @@ img[data-loaded="true"] {
 }
 
 .marquee-pill {
-  @apply inline-flex shrink-0 items-center rounded-full border border-blue-200/60 bg-gradient-to-r from-blue-100 to-fuchsia-100 px-4 py-2 text-sm font-medium text-gray-700 dark:border-blue-500/20 dark:from-blue-900/70 dark:to-fuchsia-900/70 dark:text-gray-200;
+  @apply inline-flex shrink-0 items-center rounded-md border border-blue-200/60 bg-gradient-to-r from-blue-100 to-fuchsia-100 px-4 py-2 text-sm font-medium text-gray-700 dark:border-blue-500/20 dark:from-blue-900/70 dark:to-fuchsia-900/70 dark:text-gray-200;
 }
 
 @keyframes marquee-left {
@@ -266,6 +287,15 @@ img[data-loaded="true"] {
     transform: translateX(0);
   }
   100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  100% {
+    transform: translateX(0%);
+  }
+  0% {
     transform: translateX(-50%);
   }
 }

@@ -50,7 +50,7 @@ const About = () => {
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
             <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-4"
+              className="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-300"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >

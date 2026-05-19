@@ -84,7 +84,7 @@ const Education = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-300">
               Education & <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">Certifications</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -112,7 +112,8 @@ const Education = () => {
                   {/* Education Card */}
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className="flex-1 bg-gradient-to-br from-white to-gray-50 dark:from-gray-700 dark:to-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    // className="flex-1 bg-gradient-to-br from-white to-gray-50 dark:from-gray-700 dark:to-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="flex-1 overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700/50 p-8 backdrop-blur-md transition-all duration-300 hover:border-blue-300 dark:hover:border-gray-600 shadow-md hover:shadow-xl"
                   >
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                       <div>
@@ -145,8 +146,8 @@ const Education = () => {
 
                     <div className="grid md:grid-cols-2 gap-4">
                       {edu.highlights.map((highlight, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <div key={idx} className="flex items-start space-x-2">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mt-1.5 shrink-0"></div>
                           <span className="text-gray-700 dark:text-gray-300 text-sm">
                             {highlight}
                           </span>
