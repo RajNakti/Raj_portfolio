@@ -112,7 +112,8 @@ const Education = () => {
                   {/* Education Card */}
                   <motion.div
                     whileHover={{ scale: 1.02 }}
-                    className="flex-1 bg-gradient-to-br from-white to-gray-50 dark:from-gray-700 dark:to-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    // className="flex-1 bg-gradient-to-br from-white to-gray-50 dark:from-gray-700 dark:to-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="flex-1 overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700/50 p-8 backdrop-blur-md transition-all duration-300 hover:border-blue-300 dark:hover:border-gray-600 shadow-md hover:shadow-xl"
                   >
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                       <div>
