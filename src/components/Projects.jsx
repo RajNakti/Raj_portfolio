@@ -109,9 +109,9 @@ const Projects = () => {
   const scroll = (direction) => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
-      const cardWidth = 360; // Card width + gap
+      const firstCard = container.firstElementChild;
+      const cardWidth = firstCard ? firstCard.offsetWidth + 24 : 360; // 24px is gap-6
       const scrollAmount = cardWidth;
-      
       const newScrollLeft = direction === 'left' 
         ? container.scrollLeft - scrollAmount 
         : container.scrollLeft + scrollAmount;
@@ -131,7 +131,7 @@ const Projects = () => {
     whileHover={{ y: -10 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     // className="bg-white dark:bg-gray-800/50 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-gray-600 relative flex-shrink-0 group backdrop-blur-sm"
-    className="bg-white dark:bg-gray-800/50 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-gray-600 relative flex flex-col flex-shrink-0 group backdrop-blur-sm w-[275px] min-h-[450px]"
+    className="bg-white dark:bg-gray-800/50 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-gray-600 relative flex flex-col flex-shrink-0 group backdrop-blur-sm w-[calc(100vw-6rem)] sm:w-[320px] md:w-[350px] min-h-[450px]"
   >
     {/* Project Image */}
     <div className="relative overflow-hidden">
@@ -254,7 +254,7 @@ const Projects = () => {
           </div>
 
           {/* Scrollable Projects Container */}
-          <div className="relative px-12">
+          <div className="relative px-8 md:px-12">
             {/* Left Arrow */}
             {canScrollLeft && (
               <button

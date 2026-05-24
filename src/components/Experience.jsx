@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiBriefcase, FiCalendar } from 'react-icons/fi';
+import { FiCode, FiCalendar, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
 const experiences = [
   {
@@ -128,23 +128,30 @@ const Experience = () => {
 
                 {/* ── Card ── */}
                 {/* <div className="overflow-hidden rounded-xl border border-gray-200/60 dark:border-gray-500/50 bg-white/80 dark:bg-gray-700/40 p-5 backdrop-blur-sm md:p-6 transition-all duration-300 hover:border-gray-300/80 dark:hover:border-gray-600/60 shadow-lg hover:shadow-xl"> */}
-                <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700/50 p-5 md:p-6 backdrop-blur-sm transition-all duration-300 hover:border-blue-300 dark:hover:border-gray-600 shadow-md hover:shadow-xl">
+                <div className="relative overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-700/50 p-5 md:p-6 backdrop-blur-sm transition-all duration-300 hover:border-blue-300 dark:hover:border-gray-600 shadow-md hover:shadow-xl">
 
                   {/* Gradient accent bar */}
                   <div className={`mb-4 h-1 w-20 rounded-full bg-gradient-to-r ${experience.gradient}`} />
 
                   {/* Header: icon + title + badges */}
                   <div className="flex items-start gap-4 mb-3">
-                    <div className={`mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-r ${experience.gradient} text-white shadow-md`}>
-                      <FiBriefcase size={15} />
-                    </div>
+                    {/* <div className={`mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-r ${experience.gradient} text-white shadow-md`}>
+                      <FiCode size={15} />
+                    </div> */}
                     <div className="flex-1 min-w-0">
                       {/* Mobile date */}
                       <div className="md:hidden inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-medium text-gray-500 shadow-sm dark:bg-gray-800 dark:text-gray-400 mb-2">
                         <FiCalendar size={12} />
                         <span>{experience.duration}</span>
                       </div>
-
+                      {/* Mobile Expand Toggle - Pinned Top Right */}
+                      <button
+                        onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                        className="md:hidden absolute top-4 right-4 flex items-center justify-center p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 active:scale-95 z-10"
+                        aria-label={activeIndex === index ? "Collapse" : "Expand"}
+                      >
+                        {activeIndex === index ? <FiChevronUp size={18} className="text-gray-700 dark:text-gray-300" /> : <FiChevronDown size={18} className="text-gray-700 dark:text-gray-300" />}
+                      </button>
                       <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
                         {experience.role}
                       </h3>
@@ -170,7 +177,7 @@ const Experience = () => {
                               background: `${experience.accent}18`,
                               color: experience.accent,
                               border: `1px solid ${experience.accent}33`
-                            }}
+                            }} 
                           >
                             {experience.status}
                           </span>
@@ -216,18 +223,20 @@ const Experience = () => {
                   {/* Footer: tags + active badge */}
                   <div className="mt-4 border-t border-gray-700/40 pt-3 flex items-center justify-between">
                     <span className="text-[11px] text-gray-500">{experience.tags}</span>
-                    {experience.status && (
-                      <span
-                        className="rounded-full px-3 py-0.5 text-xs font-medium"
-                        style={{
-                          background: `${experience.accent}18`,
-                          color: experience.accent,
-                          border: `1px solid ${experience.accent}33`
-                        }}
-                      >
-                        {experience.status}
-                      </span>
-                    )}
+                    <div className="flex items-center gap-2">
+                      {experience.status && (
+                        <span
+                          className="rounded-full px-3 py-0.5 text-xs font-medium"
+                          style={{
+                            background: `${experience.accent}18`,
+                            color: experience.accent,
+                            border: `1px solid ${experience.accent}33`
+                          }}
+                        >
+                          {experience.status}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.article>
