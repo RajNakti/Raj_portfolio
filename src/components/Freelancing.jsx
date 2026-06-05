@@ -144,10 +144,10 @@ const Freelancing = () => {
 
             <motion.h1 
               variants={itemVariants}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 dark:text-gray-300"
             >
               Let's Build Something
-              <span className="block gradient-text">Amazing Together</span>
+              <span className="inline-block gradient-text px-2 py-2 leading-tight">Amazing Together</span>
             </motion.h1>
 
             <motion.p 
@@ -229,7 +229,7 @@ const Freelancing = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-300">
               My <span className="gradient-text">Services</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -304,7 +304,7 @@ const Freelancing = () => {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 dark:text-gray-300">
                 Let's Start Your <span className="gradient-text">Project</span>
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400">
