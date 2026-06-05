@@ -135,9 +135,9 @@ const Experience = () => {
 
                   {/* Header: icon + title + badges */}
                   <div className="flex items-start gap-4 mb-3">
-                    {/* <div className={`mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-r ${experience.gradient} text-white shadow-md`}>
+                    <div className={`mt-1 hidden md:flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-gradient-to-r ${experience.gradient} text-white shadow-md`}>
                       <FiCode size={15} />
-                    </div> */}
+                    </div>
                     <div className="flex-1 min-w-0">
                       {/* Mobile date */}
                       <div className="md:hidden inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-medium text-gray-500 shadow-sm dark:bg-gray-800 dark:text-gray-400 mb-2">
